@@ -1,0 +1,45 @@
+.about_me {
+    margin-top: 120px;
+    &__main {
+        display: grid;
+        grid-template-columns: 400px 570px;
+        gap: 70px;
+        &_descr {
+            margin-top: 5px;
+            span {
+                display: block;
+                width: 60px;
+                height: 3px;
+                background: $main-color;
+            }
+        }
+    }
+    &__descr {
+        margin-top: 20px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 21px;
+        color: #000000;
+    }
+    &__skills {
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: repeat(2, 260px);
+        grid-template-rows: repeat(2, minmax(116px, auto));
+        grid-auto-rows: 116px;
+        gap: 50px 20px;
+    }
+    &__skill {
+        display: flex;
+        &__descr {
+            margin-top: 6px;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 18px;
+            color: #000000;
+        }
+    }
+    &__flex {
+        padding-left: 20px;
+    }
+}
