@@ -123,6 +123,24 @@
             row-gap: 40px;
         }
     }
+    .skills {
+        &__wrapper {
+            padding: 60px 0 0 0;
+            grid-template-columns: repeat(2,minmax(265px,auto));
+            grid-template-rows: repeat(2,minmax(265px,auto));
+            grid-auto-rows: 265px;
+            gap: 10px;
+        }
+        &__item {
+            padding: 25px 25px;
+        }
+        &__rating {
+            grid-template-columns: 540px;
+            &-line {
+                width: 540px;
+            }
+        }
+    }
 }
 
 @media (max-width: 576px) {
@@ -133,6 +151,7 @@
     .title {
         &_fz36 {
             font-size: 24px;
+            line-height: 36px;
         }
         &_fz48{
             font-size: 26px;
@@ -163,5 +182,26 @@
     }
     .resume {
         padding-top: 40px;
+    }
+    .skills {
+        margin-top: 40px;
+        &__wrapper {
+            padding: 20px 15px 0 15px;
+            grid-template-columns: 270px;
+            grid-template-rows: 270px;
+            grid-auto-rows: 270px;
+            gap: 20px;
+        }
+        &__item {
+            padding: 30px 30px 25px 30px;
+        }
+        &__rating {
+            margin-top: 40px;
+            grid-template-columns: 300px;
+            gap: 40px;
+            &-line {
+                width: 300px;
+            }
+        }
     }
 }
