@@ -31,13 +31,26 @@
     }
     .skills {
         &__wrapper {
-            grid-template-columns: repeat(3,minmax(270px,auto));
+            grid-template-columns: repeat(auto-fit, 270px);
+            justify-content: space-between;
         }
         &__rating {
             grid-template-columns: repeat(2,450px);
             grid-template-rows: repeat(2,70px);
             grid-auto-rows: 70px;
             gap: 30px 60px;
+        }
+    }
+    .portfolio {
+        &__wrapper {
+            grid-template-columns: repeat(auto-fit, 280px);
+            grid-auto-rows: 280px;
+            justify-content: space-around;
+            row-gap: 30px;
+            .horizontal, .vertical {
+                grid-row: unset;
+                grid-column: unset;
+            }
         }
     }
 }
@@ -74,13 +87,22 @@
     .skills {
         &__wrapper {
             grid-template-columns: repeat(2,minmax(270px,auto));
+            justify-content: center;
         }
         &__rating {
             grid-template-columns: repeat(2,330px);
             gap: 30px 60px;
+            justify-content: center;
             &-line {
                 width: 330px;
             }
+        }
+    }
+    .price {
+        &__wrapper {
+            grid-template-columns: repeat(auto-fit, 350px);
+            padding: 60px 0 0 0;
+            justify-content: center;
         }
     }
 }
@@ -130,15 +152,26 @@
             grid-template-rows: repeat(2,minmax(265px,auto));
             grid-auto-rows: 265px;
             gap: 10px;
+            justify-content: center;
         }
         &__item {
             padding: 25px 25px;
         }
         &__rating {
             grid-template-columns: 540px;
+            justify-content: center;
             &-line {
                 width: 540px;
             }
+        }
+    }
+    .portfolio {
+        padding-top: 40px;
+    }
+    .price {
+        padding-top: 40px;
+        &__wrapper {
+            padding-top: 20px;
         }
     }
 }
@@ -191,6 +224,7 @@
             grid-template-rows: 270px;
             grid-auto-rows: 270px;
             gap: 20px;
+            justify-content: center;
         }
         &__item {
             padding: 30px 30px 25px 30px;
@@ -199,9 +233,16 @@
             margin-top: 40px;
             grid-template-columns: 300px;
             gap: 40px;
+            justify-content: center;
             &-line {
                 width: 300px;
             }
+        }
+    }
+    .price {
+        &__wrapper {
+            grid-template-columns: repeat(auto-fit,300px);
+            row-gap: 20px;
         }
     }
 }
